@@ -1,4 +1,4 @@
-{% set version = "5.0.5" %}
+{% set version = "5.2.2" %}
 
 package:
     name: xz
@@ -7,10 +7,10 @@ package:
 source:
     fn:  xz-{{ version }}.tar.bz2
     url: http://tukaani.org/xz/xz-{{ version }}.tar.gz
-    sha256: 5dcffe6a3726d23d1711a65288de2e215b4960da5092248ce63c99d50093b93a
+    sha256: 73df4d5d34f0468bd57d09f2d8af363e95ed6cc3a4a86129d2f2c366259902a2
 
 build:
-    number: 1
+    number: 0
     skip: True  # [win]
 
 test:
