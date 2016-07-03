@@ -11,14 +11,25 @@ source:
 
 build:
     number: 0
-    skip: True  # [win]
+    # Limited to VS 2015 on Win for now - for sake of C99 support.
+    msvc_compiler: 14.0  # [win]
+
+requirements:
+    run:
+       # Limited to VS 2015 on Win for now - for sake of C99 support.
+       - vs2015_runtime  # [win]
 
 test:
     commands:
-        - xz --help
-        - unxz --help
-        - lzma --help
+        - xz --help  # [not win]
+        - unxz --help  # [not win]
+        - lzma --help  # [not win]
         - conda inspect linkages -n _test xz  # [linux]
+        # Note: no xz executable exists on windows right now - only libs.
+        - if not exist %PREFIX%\\Library\\bin\\liblzma.dll exit 1  # [win]
+        - if not exist %PREFIX%\\Library\\lib\\liblzma.lib exit 1  # [win]
+        - if not exist %PREFIX%\\Library\\lib\\liblzma_static.lib exit 1  # [win]
+        - if not exist %PREFIX%\\Library\\include\\lzma.h exit 1  # [win]
 
 about:
     home: http://tukaani.org/xz/
@@ -27,4 +38,5 @@ about:
 
 extra:
     recipe-maintainers:
+        - msarahan
         - ocefpaf
