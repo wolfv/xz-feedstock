@@ -11,6 +11,18 @@ Summary: The xz command is a very powerful program for compressing files.
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xz-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/xz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xz-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xz-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xz-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xz/badges/version.svg)](https://anaconda.org/conda-forge/xz)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xz/badges/downloads.svg)](https://anaconda.org/conda-forge/xz)
+
 Installing xz
 =============
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `xz` available on your platform wi
 ```
 conda search xz --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xz-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/xz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xz-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xz-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xz-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xz/badges/version.svg)](https://anaconda.org/conda-forge/xz)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xz/badges/downloads.svg)](https://anaconda.org/conda-forge/xz)
 
 
 Updating xz-feedstock
