@@ -35,7 +35,6 @@ test:
 
 about:
   home: http://tukaani.org/xz/
-  summary: 'The xz command is a very powerful program for compressing files.'
   license: LGPL-2.1 and GPL-2.0
   license_file: COPYING
   summary: Data compression software with high compression ratio
