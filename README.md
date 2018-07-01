@@ -7,21 +7,26 @@ Package license: LGPL-2.1 and GPL-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: The xz command is a very powerful program for compressing files.
+Summary: Data compression software with high compression ratio
 
+XZ Utils is free general-purpose data compression software with a high
+compression ratio. XZ Utils were written for POSIX-like systems, but also
+work on some not-so-POSIX systems.
 
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xz-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/xz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xz-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xz-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xz-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/xz-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/xz-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/xz-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/xz-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/xz-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/xz-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xz/badges/version.svg)](https://anaconda.org/conda-forge/xz)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/xz/badges/downloads.svg)](https://anaconda.org/conda-forge/xz)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-xz-green.svg)](https://anaconda.org/conda-forge/xz) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/xz.svg)](https://anaconda.org/conda-forge/xz) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/xz.svg)](https://anaconda.org/conda-forge/xz) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/xz.svg)](https://anaconda.org/conda-forge/xz) |
 
 Installing xz
 =============
@@ -66,6 +71,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
