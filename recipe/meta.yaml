@@ -35,7 +35,6 @@ test:
     - lzma --help  # [not win]
     - xz.exe --help  # [win]
     - unxz.exe --help  # [win]
-    - lzma.exe --help  # [win]
     - if not exist %PREFIX%\\Library\\bin\\liblzma.dll exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\liblzma.lib exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\liblzma_static.lib exit 1  # [win]
