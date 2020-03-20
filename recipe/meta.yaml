@@ -12,7 +12,7 @@ source:
     - 0002-Add-gettimeofday-for-VS2008.patch
 
 build:
-  number: 1001
+  number: 1002
   run_exports:
     # XZ's track record of backcompat is very good.  Keep default pins (next major version)
     #    https://abi-laboratory.pro/tracker/timeline/xz/
@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - c99-to-c89  # [win and vc<14]
     - cmake  # [win]
+    - ninja  # [win]
     - make  # [not win]
     - automake  # [not win]
   host:
@@ -44,7 +45,7 @@ test:
 
 about:
   home: http://tukaani.org/xz/
-  license: LGPL-2.1 and GPL-2.0
+  license: [LGPL-2.1, GPL-2.0]
   license_file: COPYING
   summary: Data compression software with high compression ratio
   description: |
