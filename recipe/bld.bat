@@ -23,7 +23,7 @@ set C99_TO_C89_CONV_DEBUG_LEVEL=1
 COPY %LIBRARY_INC%\inttypes.h src\common\inttypes.h
 COPY %LIBRARY_INC%\stdint.h src\common\stdint.h
 :skip_c99_wrapper
-cmake -G "NMake Makefiles" ^
+cmake -GNinja ^
       -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
       %COMPILER% ^
       -DCMAKE_C_USE_RESPONSE_FILE_FOR_OBJECTS:BOOL=FALSE ^
