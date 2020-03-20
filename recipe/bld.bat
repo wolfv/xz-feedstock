@@ -30,9 +30,9 @@ cmake -GNinja ^
       -DCMAKE_BUILD_TYPE=Release ^
       --debug-trycompile ^
       .
-ninja VERBOSE=1
+ninja
 if errorlevel 1 exit /b 1
-ninja VERBOSE=1 install
+ninja install
 if errorlevel 1 exit /b 1
 DEL src\common\inttypes.h
 DEL src\common\stdint.h
