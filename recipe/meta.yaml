@@ -12,7 +12,7 @@ source:
     - 0002-Add-gettimeofday-for-VS2008.patch
 
 build:
-  number: 1001
+  number: 1002
   run_exports:
     # XZ's track record of backcompat is very good.  Keep default pins (next major version)
     #    https://abi-laboratory.pro/tracker/timeline/xz/
@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - c99-to-c89  # [win and vc<14]
     - cmake  # [win]
+    - ninja  # [win]
     - make  # [not win]
     - automake  # [not win]
   host:
