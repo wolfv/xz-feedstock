@@ -45,7 +45,7 @@ test:
 
 about:
   home: http://tukaani.org/xz/
-  license: [LGPL-2.1, GPL-2.0]
+  license: LGPL-2.1 and GPL-2.0
   license_file: COPYING
   summary: Data compression software with high compression ratio
   description: |
