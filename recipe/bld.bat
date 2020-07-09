@@ -45,7 +45,6 @@ msbuild xz_win.sln /p:Configuration="Release" /p:Platform="%ARCH%" /verbosity:no
 if errorlevel 1 exit /b 1
 COPY Release\%ARCH%\liblzma_dll\liblzma.dll %LIBRARY_BIN%\
 COPY Release\%ARCH%\liblzma_dll\liblzma.lib %LIBRARY_LIB%\
-COPY Release\%ARCH%\liblzma\liblzma.lib %LIBRARY_LIB%\liblzma_static.lib
 
 :common_exit
 cd %SRC_DIR%
