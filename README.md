@@ -5,7 +5,7 @@ Home: http://tukaani.org/xz/
 
 Package license: LGPL-2.1 and GPL-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Data compression software with high compression ratio
 

@@ -12,7 +12,7 @@ source:
     - 0002-Add-gettimeofday-for-VS2008.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # XZ's track record of backcompat is very good.  Keep default pins (next major version)
     #    https://abi-laboratory.pro/tracker/timeline/xz/
@@ -38,8 +38,10 @@ test:
     - unxz.exe --help  # [win]
     - if not exist %PREFIX%\\Library\\bin\\liblzma.dll exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\liblzma.lib exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\lib\\liblzma_static.lib exit 1  # [win]
+    - if exist %PREFIX%\\Library\\lib\\liblzma_static.lib exit 1  # [win]
     - if not exist %PREFIX%\\Library\\include\\lzma.h exit 1  # [win]
+    - test -f ${PREFIX}/lib/liblzma${SHLIB_EXT}  # [unix]
+    - test ! -f ${PREFIX}/lib/liblzma.a          # [unix]
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 

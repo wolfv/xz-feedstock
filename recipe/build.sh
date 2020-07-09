@@ -2,7 +2,8 @@
 
 ./configure --prefix=${PREFIX}  \
             --build=${BUILD}    \
-            --host=${HOST}
+            --host=${HOST}      \
+            --disable-static
 make -j${CPU_COUNT} ${VERBOSE_AT}
 make check
 make install
