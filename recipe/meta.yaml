@@ -31,7 +31,8 @@ requirements:
 
 outputs:
   - name: xz
-    script: install.sh  # [unix]
+    script: install.sh   # [unix]
+    script: install.bat  # [win]
     test:
       commands:
         - xz --help  # [not win]
@@ -48,9 +49,8 @@ outputs:
         - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
         - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
   - name: xz-static
-    build:
-      skip: true  # [win]
     script: install.sh  # [unix]
+    script: install.bat  # [win]
     requirements:
       build:
         - {{ compiler('c') }}
@@ -64,7 +64,7 @@ outputs:
         - xz
     test:
       commands:
-        - if exist %LIBRARY_PREFIX%\lib\liblzma_static.lib exit 1  # [win]
+        - if not exist %LIBRARY_PREFIX%\lib\liblzma_static.lib exit 1  # [win]
         - test -f ${PREFIX}/lib/liblzma.a          # [unix]
 
 about:
