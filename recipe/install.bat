@@ -2,7 +2,7 @@ ninja install
 if errorlevel 1 exit /b 1
 
 if %PKG_NAME%==xz-static (
-	echo NOT DOING ANYTHING
+	echo "Keeping all files, conda will dedupe"
 ) else (
 	DEL src\common\inttypes.h
 	DEL src\common\stdint.h
