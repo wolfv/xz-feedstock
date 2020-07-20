@@ -61,7 +61,9 @@ outputs:
         - automake  # [not win]
       host:
         - msinttypes  # [win and vc<14]
-        - xz
+        - {{ pin_subpackage('xz', exact=True) }}
+      run:
+        - {{ pin_subpackage('xz', exact=True) }}
     test:
       commands:
         - if not exist %LIBRARY_PREFIX%\lib\liblzma_static.lib exit 1  # [win]
