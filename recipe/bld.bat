@@ -21,13 +21,3 @@ cmake -GNinja ^
       .
 ninja
 if errorlevel 1 exit /b 1
-ninja install
-if errorlevel 1 exit /b 1
-DEL src\common\inttypes.h
-DEL src\common\stdint.h
-DEL %LIBRARY_LIB%\liblzma_static.lib
-
-cd %SRC_DIR%
-MOVE src\liblzma\api\lzma %LIBRARY_INC%\
-COPY src\liblzma\api\lzma.h %LIBRARY_INC%\
-exit /b 0
