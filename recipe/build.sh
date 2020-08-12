@@ -7,7 +7,10 @@ autoreconf -vfi
             --host=${HOST}
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
-make check
+
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != 1 ]]; then
+  make check
+fi
 
 # remove libtool files
 find $PREFIX -name '*.la' -delete
