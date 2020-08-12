@@ -26,6 +26,7 @@ requirements:
     - ninja  # [win]
     - make  # [not win]
     - automake  # [not win]
+    - libtool  # [not win]
   host:
     - msinttypes  # [win and vc<14]
 
