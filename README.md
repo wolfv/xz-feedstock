@@ -5,9 +5,13 @@ Home: http://tukaani.org/xz/
 
 Package license: LGPL-2.1 and GPL-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xz-feedstock/blob/master/LICENSE.txt)
 
 Summary: Data compression software with high compression ratio
+
+Development: http://git.tukaani.org/
+
+Documentation: http://tukaani.org/xz/
 
 XZ Utils is free general-purpose data compression software with a high
 compression ratio. XZ Utils were written for POSIX-like systems, but also
